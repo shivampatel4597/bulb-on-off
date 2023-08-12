@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulb Switching</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background-color: #de3163;
+      }
+      h1 {
+        margin: 20px 10px;
+        text-align: center;
+        margin: 20px auto;
+        background-color: blanchedalmond;
+      }
+      .img1 {
+        height: 300px;
+        width: 300px;
+        margin: 40px auto;
+        display: block;
+      }
+      .img2 {
+        height: 500px;
+        width: 500px;
+      }
+      .btn {
+        margin: 70px 403px;
+        padding: 4px 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .btn1 {
+        padding: 4px 4px;
+        background-color: deepskyblue;
+        border-radius: 6px;
+        font-size: medium;
+        font-weight: 30px;
+      }
+      .btn2 {
+        padding: 4px 4px;
+        background-color: deepskyblue;
+        border-radius: 6px;
+        font-size: medium;
+        font-weight: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Finally here is my switch to success</h1>
+
+      <img src="/3-bulb-png-image.png" class="img1" alt="" />
+      <!-- <img src="/4-yellow-light-bulb-png-image.png" class="img2" alt="" /> -->
+      <div class="btn">
+        <button class="btn1" onclick="btnOn()">Switch On</button>
+        <button class="btn2" onclick="btnOff()">Switch Off</button>
+      </div>
+    </div>
+
+    <script>
+      let isBulbOn = true; //for tracking
+
+      const btnOn = () => {
+        const img1 = document.querySelector(".img1");
+        img1.src = "4-yellow-light-bulb-png-image.png";
+        isBulbOn = true;
+      };
+      const btnOff = () => {
+        if (isBulbOn) {
+          const img1 = document.querySelector(".img1");
+          img1.src = "3-bulb-png-image.png";
+          isBulbOn = false;
+        } else {
+          window.alert("Switch is already off");
+        }
+      };
+    </script>
+  </body>
+</html>
